@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(0deg,  #11172a, rgb(13, 75, 75));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: wheat;
+}
+
+.board_container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.required_buttons {
+    padding-top: 12%;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.status {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game_button {
+    height: 35px;
+}
+
+.board {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 10px solid black;
+}
+
+/* .status {
+
+} */
+
+.square {
+    height: 50px;
+    width: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.light {
+    background-color: wheat;
+}
+
+.dark {
+    background-color: darkcyan;
+}
+
+.piece {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: lime;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(46, 46, 30, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.check {
+    background-color: rgb(255, 0, 0);
+}
